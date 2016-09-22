@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.davyuu.tipcalc.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill"
+        android:id="@+id/billTextView"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/billText"
+        android:layout_alignStart="@+id/billText"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        android:id="@+id/billText"
+        android:hint="Enter Bill"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:layout_below="@+id/billTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:id="@+id/billUnitTextView"
+        android:textSize="30dp"
+        android:layout_alignBottom="@+id/billText"
+        android:layout_toRightOf="@+id/billText"
+        android:layout_toEndOf="@+id/billText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip %"
+        android:id="@+id/tipTextView"
+        android:textSize="20dp"
+        android:layout_below="@+id/billText"
+        android:layout_alignLeft="@+id/billText"
+        android:layout_alignStart="@+id/billText"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        android:id="@+id/tipText"
+        android:hint="Enter Tip"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:layout_below="@+id/tipTextView"
+        android:layout_alignLeft="@+id/tipTextView"
+        android:layout_alignStart="@+id/tipTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:id="@+id/tipUnitTextView"
+        android:textSize="30dp"
+        android:layout_alignBottom="@+id/tipText"
+        android:layout_toRightOf="@+id/tipText"
+        android:layout_toEndOf="@+id/tipText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:id="@+id/calculateButton"
+        android:layout_below="@+id/tipText"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/tipUnitTextView"
+        android:layout_alignLeft="@+id/tipText"
+        android:layout_alignStart="@+id/tipText"
+        android:background="#2b3eb5"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIP"
+        android:id="@+id/tipTotalLabelTextView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/calculateButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:id="@+id/tipTotalUnitTextView"
+        android:layout_alignBottom="@+id/tipTotalTextView"
+        android:layout_toLeftOf="@+id/tipTotalTextView"
+        android:layout_toStartOf="@+id/tipTotalTextView"
+        android:textSize="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipTotalTextView"
+        android:layout_alignTop="@+id/tipTotalLabelTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="40dp"
+        android:text="0.00" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL"
+        android:id="@+id/totalLabelTextView"
+        android:textSize="40dp"
+        android:layout_below="@+id/tipTotalLabelTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:id="@+id/totalUnitTextView"
+        android:textSize="40dp"
+        android:layout_alignBottom="@+id/totalTextView"
+        android:layout_toLeftOf="@+id/totalTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalTextView"
+        android:textSize="40dp"
+        android:text="0.00"
+        android:layout_alignBottom="@+id/totalLabelTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
